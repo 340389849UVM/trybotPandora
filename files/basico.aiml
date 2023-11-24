@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+  <category>
+    <pattern>HOLA</pattern>
+    <template>
+        <random>
+            <li>Bienvenid@ ¿quieres saber cuáles son las entradas o vamos con los platos fuertes.</li>     
+            <li>Buen día ¿toma entrada o empieza con un platillo fuerte?</li>
+            <li>Excelente día ¿quieres saber las entradas o prefiere pedir un platillo fuerte?</li>
+            <li>Saludos! ¿Desea ver las entradas o pasamos con un plato fuerte?</li>    
+            <li>Desea ordenar una entrada o un platillo fuerte</li>
+        </random>
+    </template>
+  </category>
+  
+  <category>
+  <pattern>ENTRADAS</pattern>
+    <template>
+        <random>
+            <li>Tenemos palitos de pan, ensalada o fruta.</li> 
+            <li>Contamos con spaguetti o arroz</li>
+            <li>Como entradas tenemos guacamole o queso fundido</li>
+        </random>
+    </template>
+  </category>
+  
+  <category>
+      <pattern>* ENTRADAS </pattern>
+      <template>
+          <srai>ENTRADAS</srai>
+      </template>
+    </category>
+      
+    <category>
+       <pattern>* ENTRADAS *</pattern>
+      <template>
+          <srai>ENTRADAS</srai>
+      </template> 
+    </category>    
+
+     
+    <category>
+  <pattern>PLATOS FUERTES</pattern>
+    <template>
+        <random>
+            <li>Muy bien! será ¿carne o pollo?</li>
+            <li>Contamos con alitas o boneless</li>
+            <li>Tenemos hamburguesa de res, hot dogs o pizza</li>
+        </random>
+    </template>
+  </category>
+  
+  <category>
+  <pattern>POSTRES</pattern>
+    <template>
+        <random>
+            <li>¿Quiere probar el flan de la casa?</li>
+            <li>Claro! Contamos con helado de frutos rojos o pastel</li>
+            <li>Tenemos cheescake y arroz con leche</li>
+        </random>
+    </template>
+    </category>
+    
+    <category>
+        <pattern>* POSTRES</pattern>
+        <template>
+            <srai>POSTRES</srai>
+        </template>
+        </category>
+    
+        <category>
+           <pattern>* POSTRES *</pattern>
+        <template>
+            <srai>POSTRES</srai>
+        </template> 
+        </category>
+    
+  <category>
+      <pattern>El platillo * no esta bien preparado</pattern>
+      <template>Una disculpa, puedo cambiar su <star/> por alguna otra opción del menú</template>
+  </category>
+  
+  <category>
+      <pattern>Excelente * felicitaciones al chef </pattern>
+      <template>El <star/> es nuestra especialidad, yo le mando su mensaje al chef </template>
+  </category>
+  
+  <category>
+      <pattern>Podría poner una orden de * para llevar</pattern>
+      <template>Claro! En momento pongo su pedido de <star/> para llevar </template>
+  </category>
+  
+  <category>
+  <pattern>CUENTA</pattern>
+    <template>
+        <random>
+            <li>Esperamos haya sido de su agrado </li>
+            <li>¡Enseguida!</li>
+            <li>Gracias, vuelva pronto</li>
+        </random>
+    </template>
+    </category>
+  
+</aiml>
